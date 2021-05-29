@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/main.ts",
+    "get-calendar-events": "ts-node ./src/calendar.ts",
+    "update-slack-status": "ts-node -r dotenv-safe/config ./src/slack.ts",
     "test": "jest"
   },
   "keywords": [],
@@ -23,6 +24,8 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
+    "@slack/web-api": "^6.2.3",
+    "dotenv-safe": "^8.2.0",
     "googleapis": "^39.2.0"
   }
 }
